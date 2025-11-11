@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Custom CSS for enhanced UI */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-inter antialiased;
+    @apply bg-gradient-to-br from-white via-blue-50 to-indigo-50;
+    @apply dark:from-dark-900 dark:via-dark-800 dark:to-dark-700;
+    transition: all 0.3s ease;
+  }
+}
+
+@layer components {
+  /* Button styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700;
+    @apply text-white font-semibold py-3 px-8 rounded-xl;
+    @apply transition-all duration-300 ease-in-out;
+    @apply transform hover:scale-105 hover:shadow-lg;
+    @apply focus:outline-none focus:ring-4 focus:ring-primary-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/80 dark:bg-dark-800/80 backdrop-blur-sm;
+    @apply border border-primary-200 dark:border-dark-600;
+    @apply text-primary-700 dark:text-primary-300;
+    @apply font-semibold py-3 px-8 rounded-xl;
+    @apply transition-all duration-300 ease-in-out;
+    @apply hover:bg-primary-50 dark:hover:bg-dark-700;
+    @apply focus:outline-none focus:ring-4 focus:ring-primary-200;
+  }
+  
+  /* Card styles */
+  .card {
+    @apply bg-white/60 dark:bg-dark-800/60 backdrop-blur-sm;
+    @apply border border-white/20 dark:border-dark-700/50;
+    @apply rounded-2xl p-6;
+    @apply shadow-lg hover:shadow-xl;
+    @apply transition-all duration-300;
+  }
+  
+  .card-feature {
+    @apply card hover:scale-105;
+    @apply border border-primary-200/50 dark:border-primary-800/30;
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-accent-500;
+    @apply bg-clip-text text-transparent;
+  }
+  
+  /* Code window styling */
+  .code-window {
+    @apply bg-code-bg border border-code-border rounded-lg overflow-hidden;
+    @apply shadow-2xl;
+  }
+  
+  .code-header {
+    @apply bg-code-surface px-4 py-2 flex items-center space-x-2;
+  }
+  
+  .code-dot {
+    @apply w-3 h-3 rounded-full;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-gradient {
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .glass {
+    @apply bg-white/10 dark:bg-dark-800/10 backdrop-blur-lg;
+    @apply border border-white/20 dark:border-dark-700/20;
+  }
+}
+
+/* Theme-specific styles */
+.ocean {
+  @apply bg-gradient-to-br from-ocean-900 via-ocean-800 to-ocean-700;
+}
+
+.midnight {
+  @apply bg-gradient-to-br from-midnight-900 via-midnight-800 to-midnight-700;
+}
+
+/* Ocean theme components */
+.ocean .bg-white {
+  @apply bg-ocean-800/80;
+}
+
+.ocean .text-gray-900 {
+  @apply text-ocean-100;
+}
+
+.ocean .text-gray-600 {
+  @apply text-ocean-200;
+}
+
+/* Midnight theme components */
+.midnight .bg-white {
+  @apply bg-midnight-800/80;
+}
+
+.midnight .text-gray-900 {
+  @apply text-midnight-100;
+}
+
+.midnight .text-gray-600 {
+  @apply text-midnight-200;
+}
