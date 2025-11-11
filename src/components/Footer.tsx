@@ -7,7 +7,6 @@ import {
   CodeBracketIcon,
   HeartIcon
 } from '@heroicons/react/24/outline'
-import ThemeSwitcher from './ThemeSwitcher'
 
 const socialLinks = [
   {
@@ -164,10 +163,6 @@ export default function Footer() {
               <div className="flex items-center space-x-3 text-gray-300">
                 <UserIcon className="h-5 w-5" />
                 <span className="text-sm">UX/UI Designer & Developer</span>
-              </div>
-              <div className="pt-2">
-                <div className="text-sm text-gray-400 mb-2">Theme</div>
-                <ThemeSwitcher />
               </div>
             </div>
           </motion.div>
