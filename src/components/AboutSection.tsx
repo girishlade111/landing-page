@@ -144,20 +144,24 @@ export default function AboutSection() {
                   viewport={{ once: true }}
                   className="relative inline-block mb-6"
                 >
-                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-emerald-500 flex items-center justify-center shadow-xl">
-                    <UserIcon className="w-12 h-12 text-white" />
+                  <div className="relative w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-emerald-500 shadow-xl overflow-hidden">
+                    <img
+                      src="/girish-profile.png"
+                      alt="Girish Lade - Creator of CodeEnhance AI"
+                      className="w-full h-full object-cover"
+                    />
+                    {/* Status indicator */}
+                    <motion.div
+                      animate={{
+                        scale: [1, 1.2, 1],
+                        boxShadow: ["0 0 0 0 rgba(34, 197, 94, 0.7)", "0 0 0 8px rgba(34, 197, 94, 0)", "0 0 0 0 rgba(34, 197, 94, 0)"]
+                      }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                      className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-3 border-white flex items-center justify-center"
+                    >
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </motion.div>
                   </div>
-                  {/* Status indicator */}
-                  <motion.div
-                    animate={{
-                      scale: [1, 1.2, 1],
-                      boxShadow: ["0 0 0 0 rgba(34, 197, 94, 0.7)", "0 0 0 8px rgba(34, 197, 94, 0)", "0 0 0 0 rgba(34, 197, 94, 0)"]
-                    }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-3 border-white flex items-center justify-center"
-                  >
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                  </motion.div>
                 </motion.div>
 
                 <h4 className="text-2xl font-bold text-gray-900 mb-2">Girish Lade</h4>
