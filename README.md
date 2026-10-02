@@ -221,4 +221,6 @@ If you find this project helpful, please consider:
 
 **Built with ❤️ by [LadeStack.in](https://ladestack.in)**
 
+Built by Girish Lade — [ladestack.in](https://ladestack.in)
+
 © 2025 Lade Stack. All rights reserved.
