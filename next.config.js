@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  // basePath so the statically-exported site works as a GitHub project page
+  // (served from https://girishlade111.github.io/landing-page/)
+  basePath: '/landing-page',
   experimental: {
     appDir: true,
   },
