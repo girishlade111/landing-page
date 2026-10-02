@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   experimental: {
     appDir: true,
   },
   images: {
+    unoptimized: true,
     domains: ['avatars.githubusercontent.com'],
   },
   seo: {
